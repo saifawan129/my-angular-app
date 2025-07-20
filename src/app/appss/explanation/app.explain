@@ -1,0 +1,10 @@
+AppComponent (Parent)
+|
+├── app-user [user]="user"  👈 Sends a user object to child
+|     |
+|     └── Clicks or emits select event:
+|           this.select.emit(user.id)
+|
+└── (select)="onSelectUser($event)"  👈 Receives selected user ID
+        → updates selectedUser
+        → updates tasks name

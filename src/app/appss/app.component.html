@@ -1,0 +1,12 @@
+<app-header />
+
+<main>
+  <app-tasks [name]="selectedUser ? selectedUser.name : ''" />
+  <ul id="users">
+    @for (user of users; track user.id) {
+      <li>
+        <app-user [user]="user" (select)="onSelectUser($event)" />
+      </li>
+    }
+  </ul>
+</main>

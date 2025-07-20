@@ -1,0 +1,28 @@
+#users {
+    width: 25%;
+    margin-top: -17rem;
+    margin-right: 22rem;
+    margin-bottom: 9rem;
+    margin-left: 18rem;
+    padding: 65px;
+    display: flex;
+    gap: 0.5rem;
+    overflow: auto;
+    flex-direction: column;
+    list-style: none;
+}
+   @media (min-width: 768px) {
+  main {
+    margin: 4rem auto;
+    grid-template-columns: 1fr 3fr;
+  }
+
+   }
+   h1{
+    text-align: center;
+    margin-top: 10rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: visible;
+   }
