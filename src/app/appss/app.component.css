@@ -26,3 +26,12 @@
     font-weight: bold;
     overflow: visible;
    }
+#fallback{
+    text-align: center;
+    margin-top: 10rem;
+    color: #ffffff;
+    font-size: 2rem;
+    font-weight: bold;
+    overflow: visible;
+    margin-left: 192px;
+}
