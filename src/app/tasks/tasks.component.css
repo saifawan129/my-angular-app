@@ -1,19 +1,19 @@
 #tasks {
-  padding: 1rem;
-  border-radius: 8px;
-  width: 100%;
-  max-width: 600px;           /* Limits how wide it can go */
-  margin-inline: auto;        /* Centers it */
-  background-color: #3a2c54;
-  max-height: calc(100vh - 200px);
-  overflow: auto;
-  padding-left: 145px;
-  margin-left: 626px;
-  
+    padding: 1rem;
+    border-radius: 8px;
+    max-height: 60vh;
+    
+    padding-left: 44rem;
+    margin-top: -587px;
+    height: 240px;
 }
 
 header {
-  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 2rem;
+  gap: 1rem;
 }
 
 h2 {
@@ -24,16 +24,9 @@ h2 {
 }
 
 menu {
-  position: absolute;
-  top: 0;
-  right: 0;
+  margin: 0;
+  padding: 0;
 }
-main {
-  display: flex;
-  gap: 2rem;
-  align-items: flex-start;
-}
-
 
 menu button {
   font: inherit;

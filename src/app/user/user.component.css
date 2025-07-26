@@ -7,7 +7,7 @@ div {
 button {
   display: flex;
   align-items: center;
-  gap: 1.5rem;
+  gap: 0.5rem;
   padding: 0.35rem 0.5rem;
   background-color: #433352;
   color: #c3b3d1;
@@ -22,12 +22,12 @@ button {
 button:hover,
 button:active,
 .active {
-  background-color: #7441b8;
-  color: #eae6ec;
+  background-color: #9965dd;
+  color: #150722;
 }
 
 img {
-  width: 4rem;
+  width: 2rem;
   object-fit: contain;
   border-radius: 50%;
   box-shadow: 0 1px 8px rgba(0, 0, 0, 0.3);

@@ -7,29 +7,24 @@ import { TasksComponent } from '../tasks/tasks.component';
 
 
 
+
 @Component({
-  selector: 'app-root',
-  imports: [HeaderComponent, UserComponent, TasksComponent ],
-  templateUrl: './app.component.html',
-  styleUrl: './app.component.css',
-  standalone: true,
-  
+    selector: 'app-root',
+    standalone: true,
+    templateUrl: './app.component.html',
+    styleUrl: './app.component.css',
+    imports: [HeaderComponent, UserComponent, TasksComponent]
 })
 export class AppComponent {
-  title = 'my-angular-app';
   users = DUMMY_USERS;
-  // DUMMY_USERS is an array of user objects imported from dummy-user.ts
-  SelectUserId?: string ;
-  // This is the id of the user that is selected by default
+  selectedUserId?: string;
 
   get selectedUser() {
-    return this.users.find((user) => user.id === this.SelectUserId);
-    //find the user where user.id is equal to SelectUserId
+    return this.users.find((user) => user.id === this.selectedUserId);
   }
 
-  onSelectUser(id: string){
-    this.SelectUserId = id;
-    //set the SelectUserId to the id of the user that is selected
+  onSelectUser(id: string) {
+    this.selectedUserId = id;
   }
 }
 

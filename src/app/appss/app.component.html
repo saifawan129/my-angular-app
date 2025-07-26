@@ -1,22 +1,17 @@
 <app-header />
 
 <main>
+  <ul id="users">
+    @for (user of users; track user.id) {
+      <li>
+        <app-user [user]="user" [selected]="user.id === selectedUserId" (select)="onSelectUser($event)" />
+      </li>
+    }
+  </ul>
+
   @if (selectedUser) {
-  <app-tasks  [name]="selectedUser!.name" />
-  }@else {
-
-  <p id="fallback">Select the user to see names</p>
-
+    <app-tasks [userId]="selectedUser.id" [name]="selectedUser.name" />
+  } @else {
+    <p id="fallback">Select a user to see their tasks!</p>
   }
 </main>
-<ul id="users">
-  <!-- the for statement is used after angular 17 version and it was introduced in angular 17, before that ngIF anf ngFor was used alternatively -->
-
-  @for (user of users; track user.id) {
-
-  <li>
-    <app-user [user]="user" (select)="onSelectUser($event)" />
-  </li>
-  }
-  <!-- old angular projects use legacy directives such as ngif and ngfor ,these are legacy things modern angular didnt use this @*ngFor=""  @*ngIf="" -->
-</ul>
