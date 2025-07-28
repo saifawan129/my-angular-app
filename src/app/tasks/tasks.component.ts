@@ -1,5 +1,6 @@
 import { Component,Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
+import { Showw } from './tasks.model';
 
 @Component({
     selector: 'app-tasks',
@@ -36,10 +37,31 @@ export class TasksComponent {
     dueDate: '2024-06-15',
     }
   ]
+  //the code for complete task button
     get selectedUserTasks() {
     return this.tasks.filter((task) => task.userId === this.userId);
   }
-  onCompleteTassk(id:string) {
+  onCompleteTask(id:string) {
     this.tasks = this.tasks.filter((task)=> task.id !==id);
+  }
+
+  //random task i am adding for myself assesments
+  namee: string = 'User'; // Replace with dynamic user name if needed
+  OnShowUser: Showw[] = [
+    { id: 1, name: 'show number 1' },
+    { id: 2, name: 'show number 2' },
+  ];
+  nextTaskId: string[] = ['khan','malik','awan'];
+
+  addShow() {
+    this.tasks.push({
+      id: this.nextTaskId.toString(),
+      userId: this.userId,
+      title: `Task ${this.nextTaskId}`,
+      summary: `Summary for Task ${this.nextTaskId}`,
+      dueDate: new Date().toISOString().split('T')[0]
+    })
+    
+  
   }
 }
