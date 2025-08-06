@@ -1,9 +1,8 @@
-import { NgIf } from '@angular/common';
-import { Component, EventEmitter, Input, Output,  } from '@angular/core';
 
+import { Component, EventEmitter, Output,  } from '@angular/core';
 @Component({
   selector: 'app-new-task',
-  imports: [NgIf],
+  imports: [],
   templateUrl: './new-task.component.html',
   styleUrl: './new-task.component.css'
 })

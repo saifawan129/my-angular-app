@@ -2,7 +2,7 @@ import { Component,Input } from '@angular/core';
 import { TaskComponent } from './task/task.component';
 import { Showw } from './tasks.model';
 import { NewTaskComponent} from '../new-task/new-task.component';
-import { NgModule } from '@angular/core';
+
 
 
 @Component({
